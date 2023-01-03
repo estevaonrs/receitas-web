@@ -66,6 +66,7 @@ class PaginationTest(TestCase):
         )['pagination']
         self.assertEqual([11, 12, 13, 14], pagination)
 
+    def test_make_pagination_range_is_static_when_last_page_is_next(self):
         # Current page = 18 - Qty Page = 2 - Middle Page = 2
         # HERE RANGE SHOULD CHANGE
         pagination = make_pagination_range(
